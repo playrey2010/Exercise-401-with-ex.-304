@@ -47,7 +47,7 @@ public class HomeController {
 
     @RequestMapping("/update/{id}")
     public String updateCar(@PathVariable("id") long id, Model model){
-        model.addAttribute ( "course", carRepository.findById( id ).get () );
+        model.addAttribute ( "car", carRepository.findById( id ).get () );
         return "carform";
     }
     @RequestMapping("/delete/{id}")
